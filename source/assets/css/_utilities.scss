@@ -1,0 +1,67 @@
+/* ==========================================================================
+   Utilities
+   ========================================================================== */
+
+/* Fonts */
+
+$base-font-size-no-unit: 16;
+
+@mixin font-size($px, $lh:false) {
+	font-size: #{$px}px;
+	font-size: #{$px / $base-font-size-no-unit}rem;
+
+	@if $lh != false {
+		// Note: this line-height is #{$lh}px
+		line-height: #{$lh / $px};
+	}
+}
+
+/* Buttons */
+@mixin btn-base() {
+	display: inline-block;
+	margin: 0px 10px 10px 0;
+	padding: 11px 25px 11px 25px;
+	font-family: $header-font-family;
+	font-weight: 400;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	cursor: pointer;
+	line-height: 2;
+	@include box-sizing(border-box);
+	@include font-size(13);
+	@include transition-duration(250ms);
+	@include border-radius($base-border-radius);	
+}
+
+/* Border radius */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+
+@mixin bp($class) {
+  @if $class == phone {
+    @media (max-width: 800px) { @content; }
+  }
+ 
+  @else if $class == tablet {
+    @media (min-width: 769px) { @content; }
+  }
+ 
+  @else if $class == tabletLandscape {
+    @media (min-width : 768px) and (max-width : 1024px) { @content; }
+  }
+
+  @else if $class == desktop {
+    @media (min-width: 992px) { @content; }
+  }
+ 
+  @else if $class == lg-desktop {
+    @media (min-width: 1200px) { @content; }
+  }
+}

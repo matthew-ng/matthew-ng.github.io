@@ -1,0 +1,160 @@
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@import url(https://fonts.googleapis.com/css?family=Merriweather:300,700|Raleway:900,800);
+
+* {
+	@include box-sizing(border-box);
+}
+
+html,
+button,
+input,
+select,
+textarea {
+	color: $gray-dark;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body {
+	-webkit-font-smoothing: antialased;
+	font-family: $base-font-family;
+	@include font-size(18);
+	line-height: $base-line-height;
+    font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $header-font-family;
+	line-height: $header-line-height;
+    font-weight: 900;
+	margin: 0 0 15px 0;
+    text-transform: uppercase;
+}
+
+h1 { font-size: $h1-font-size; }
+h2 { font-size: $h2-font-size; }
+h3 { font-size: $h3-font-size; }
+h4 { font-size: $h4-font-size; }
+h5 { font-size: $h5-font-size; }
+h6 { font-size: $h6-font-size; }
+
+p {
+    margin: 0;
+    margin-bottom: 1em;
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    @include bp(phone) {
+        @include font-size(16);
+    }
+}
+
+a { 
+    font-weight: 700;
+    color: $gray-dark;
+    text-decoration: none;
+    @include transition-duration(250ms);
+
+    &:hover {
+        @include bp(desktop) {
+            color: $gray-lightest;
+        }
+    }
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    // background: $selection-color;
+    text-shadow: none;
+}
+
+::selection {
+    // background: $selection-color;
+    text-shadow: none;
+}
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+// hr {
+//     display: block;
+//     height: 1px;
+//     border: 0;
+//     border-top: $base-border;
+//     margin: 1em 0;
+//     padding: 0;
+// }
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+	max-width: 100%;
+	margin: 0;
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+
+/*
+ * ul ol styling
+ */
+
+ul,
+ol {
+    position: relative;
+    padding: 0;
+    margin: 1em 0;
+    list-style-type: none;
+
+    & {
+        
+    }
+
+    & > li {
+        position: relative;
+        padding: 0;
+        &:before {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}

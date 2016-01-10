@@ -1,0 +1,39 @@
+/* ==========================================================================
+   Variables
+   ========================================================================== */
+/* typography */
+$base-font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+$header-font-family: 'Raleway', 'Helvetica Neue', Arial, sans-serif;;
+
+/* font sizes */
+$base-font-size: 18px;
+$h1-font-size: $base-font-size * 3;
+$h2-font-size: $base-font-size * 2;
+$h3-font-size: $base-font-size * 1.75;
+$h4-font-size: $base-font-size * 1.50;
+$h5-font-size: $base-font-size * 1.25;
+$h6-font-size: $base-font-size;
+
+/* line height */
+$base-line-height: 2;
+$header-line-height: 1.2;
+
+/* other sizes */
+$base-border-radius: 30px;
+
+/* colors */
+$black: 		#000;
+$white: 		#fff;
+
+$gray-dark: 	#333333;
+$gray-light: 	#555555;
+$gray-lighter:	#eeeeee;
+$gray-lightest:	#A5A5A5;
+$blue-light: 	#39C8EA;
+$blue-dark:		#2FABC8;
+
+$cream:			#FFF5DD;
+$cream-light:	#FFFCF4;
+
+	/* base color */
+	$link-color: $gray-light;

@@ -1,0 +1,32 @@
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+    @include display-flex;
+    @include align-items(center);	
+	width: 100%;
+	padding: 15px 0;
+	@include font-size(14);
+	
+	text-align: center;
+	background: $gray-lighter;
+	color: $gray-lightest;
+
+	.footer-container {
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 5%;
+	}
+
+	ul {
+		line-height: 10px;
+	}
+	li {
+		display: inline-block;
+		padding: 0 10px;
+		border-right: 1px solid $gray-lightest;
+		&:last-child {
+			border-right: 0;
+		}
+	}
+}

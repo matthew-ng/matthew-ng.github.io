@@ -1,0 +1,226 @@
+/* ==========================================================================
+   Content
+   ========================================================================== */
+/* Container */
+
+.container {
+	width: 100%;
+	// max-width: 1040px; // default width
+	padding: 0 5%;
+	margin: 0 auto;		
+}
+
+/* Section */
+section {
+    @include display-flex;
+    @include align-items(center);
+    position: relative;
+    @include clearfix();
+}
+
+.column-right {
+	float: right;
+	padding-left: 5%;
+}
+
+.column-left {
+	padding-right: 5%;
+}
+
+.column-right,
+.column-left {
+	width: 50%;
+
+	@include bp(phone) {
+		width: 100%;
+		padding: 0;
+		float: left;
+	}
+		
+	h2 {
+		@include font-size(40);
+		@include bp(phone) {
+			margin-top: 24px;
+		}		
+	}
+
+	p {
+		line-height: 28px;	
+	}
+}
+
+section.work {
+    // margin-top: 100vh;
+    height: 100vh;
+    min-height: 700px;
+
+    @include bp(phone) {
+        height: auto;
+        min-height: auto;
+    }     
+}
+
+/* Work */
+.work-wrapper {
+    @include display-flex();
+	@include align-items(center);
+    position: relative;    
+    width: 100%;
+    height: 100%;
+    padding: 80px 0;
+    list-style: none;
+
+    @include bp(phone) {
+        height: auto;
+        padding: 60px 0;
+    }    
+}
+
+.img-crop.rac-screens {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto 0;
+	width: 48%;
+	height: 582px;
+	background-image: url('../img/rac-screens_2x.png');
+	background-position: right center;
+    background-size: cover;
+
+
+	@include bp(phone) {
+		position: relative;
+		display: block;
+		top: 0;
+		width: 100%;
+		height: 200px;
+		opacity: 1;
+		background-position: center center;
+    	background-size: contain;
+    	background-repeat: no-repeat;
+	}	    
+}
+
+/* About */
+section.about {
+	min-height: 100vh;
+	padding: 50px 50px 0 50px;
+    background: $gray-lighter;
+
+
+    @include bp(phone) {
+    	min-height: auto;
+    	padding: 50px 5%;
+    }
+
+    .container {
+    	min-height: auto;
+    	padding: 0;
+    	@include bp(phone) {
+    		padding: 0;
+    	}
+    }
+
+}
+
+.about-container {
+    width: 100%;
+    background: $white;
+    padding: 140px 60px 100px 60px;
+    @include bp(phone) {
+    	padding: 0;
+    	background: $gray-lighter;
+    }    
+}
+
+.about-content {
+	position: relative;
+	padding: 0 20%;
+	margin: 0 auto;
+
+	@include bp(tabletLandscape) {
+		padding: 0;
+	}
+
+	@include bp(phone) {
+		padding: 0;
+	}
+}
+
+.work-rac .rac-screens,
+.work-rac .column-right,
+.about-content {
+	&.animated{
+		@include bp(phone) {
+			opacity: 1;
+		}	
+	}
+}
+
+.about-picture {
+	@include border-radius(150px);
+	width: 150px;
+	height: 150px;
+	background: url('../img/profile.jpg') no-repeat;
+	background-size: cover;	
+
+	@include bp(desktop) {
+		position: absolute;
+		left: calc(10% - (150px / 2));
+	}
+	
+	@include bp(tabletLandscape) {
+		position: relative;
+		left: 0;
+		margin-bottom: 20px;		
+	}
+	@include bp(phone) {
+		position: relative;
+		left: 0;
+		margin-bottom: 20px;
+	}
+
+}
+
+.skills-content {
+	@include display-flex;
+	@include align-items(flex-start);
+	background: $white;
+	text-align: center;
+	margin-top: 100px;
+    
+    @include bp(phone) {
+    	display: none;
+    }
+
+	.skill {
+		width: 33%;		
+	}
+}
+
+
+
+
+
+
+// .about-crop {
+// 	position: absolute;
+// 	top: 0;
+// 	right: 0;
+// 	height: 100%;
+// 	width: 50%;
+// 	background-image: url('../img/sergio.jpg');
+// 	background-position: center center;
+// 	background-size: cover;
+// 	background-repeat: no-repeat;
+
+// 	@include bp(phone) {
+// 		position: relative;
+// 		display: block;
+// 		width: 100%;
+// 		height: 200px;
+//     	background-size: contain;	
+// 	}	
+// }

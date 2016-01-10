@@ -1,0 +1,30 @@
+/* ==========================================================================
+   Buttons
+   ========================================================================== */
+
+.btn-primary {
+	@include btn-base;
+	background-color: $blue-light;
+	color: $white;	
+
+	&:hover {
+		@include bp(desktop) {
+			background: $gray-dark;
+			color: $white;	
+		}
+	}
+
+}
+
+.btn-secondary {
+	@include btn-base;
+	background-color: $gray-dark;
+	color: $white;
+
+	&:hover {
+		@include bp(desktop) {
+			background-color: $gray-light;
+			color: $white;
+		}
+	}
+}
