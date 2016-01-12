@@ -18,6 +18,11 @@ footer {
 		padding: 0 5%;
 	}
 
+	p 
+	{
+		@include font-size(14);
+	}
+	
 	ul {
 		line-height: 10px;
 	}
