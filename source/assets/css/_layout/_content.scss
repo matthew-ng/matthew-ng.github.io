@@ -76,7 +76,7 @@ section.work {
     }    
 }
 
-.img-crop.rac-screens {
+.img-crop.myrac-screens {
 	position: absolute;
 	top: 0;
 	right: 0;
@@ -85,7 +85,7 @@ section.work {
 	margin: auto 0;
 	width: 48%;
 	height: 582px;
-	background-image: url('../img/rac-screens_2x.png');
+	background-image: url('../img/myrac-screens_2x.png');
 	background-position: right center;
     background-size: cover;
 
@@ -149,16 +149,6 @@ section.about {
 	}
 }
 
-.work-rac .rac-screens,
-.work-rac .column-right,
-.about-content {
-	&.animated{
-		@include bp(phone) {
-			opacity: 1;
-		}	
-	}
-}
-
 .about-picture {
 	@include border-radius(150px);
 	width: 150px;
@@ -200,27 +190,11 @@ section.about {
 	}
 }
 
-
-
-
-
-
-// .about-crop {
-// 	position: absolute;
-// 	top: 0;
-// 	right: 0;
-// 	height: 100%;
-// 	width: 50%;
-// 	background-image: url('../img/sergio.jpg');
-// 	background-position: center center;
-// 	background-size: cover;
-// 	background-repeat: no-repeat;
-
-// 	@include bp(phone) {
-// 		position: relative;
-// 		display: block;
-// 		width: 100%;
-// 		height: 200px;
-//     	background-size: contain;	
-// 	}	
-// }
+.about-content,
+.column-right {
+	&.animated {
+		@include bp(phone) {
+			opacity: 1;
+		}
+	}	
+}

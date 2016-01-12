@@ -1,15 +1,14 @@
 <!-- START modal -->
-<div class="remodal rac" data-remodal-id="modal" role="dialog" aria-labelledby="myRAC" aria-describedby="myRAC details">
-    <button data-remodal-action="close" class="remodal-close rac" aria-label="Close"></button>
-    <div class="container-modal">
-        <h2>myRAC</h2>
-        <p>
-           Working in collaboration with an external consultancy, I developed front end templates for Sitecore CMS integration from functional specifications and Photoshop designs.
-       </p>
-       <p>
-            <strong>My role</strong>: Front-End development utilising Middleman, HTML5, CSS3, SASS and Javascript/jQuery within an agile environment. Repository management through Bitbucket and Sourcetree 
-        </p>
-        <img src="assets/img/rac-full2.jpg" alt="myRAC" />
+<% data.workModal.each do |work| %>
+    <div class="remodal" id="<%= work.id %>" data-remodal-id="<%= work.id %>-modal" role="dialog" aria-labelledby="<%= work.id %>-heading" aria-describedby="<%= work.id %>-details">
+        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+        <div class="container-modal">
+            <h2 id="<%= work.id %>-heading"><%= work.title %></h2>
+            <div id="<%= work.id %>-details">
+                <%= markdown work.text %>
+                <img src="<%= image_path work.imgsrc %>" alt="<%= work.alt %>" />
+            </div>
+        </div>
     </div>
-</div>
+<% end %>
 <!-- END modal -->

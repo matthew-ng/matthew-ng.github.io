@@ -20,31 +20,29 @@
 				<div class="skill lang animated fadeInUpShort" data-id="1">
 					<h5>Languages</h5>
 					<ul>
-						<li>HTML (5)</li>
-						<li>CSS (3)</li>
-						<li>SASS / SCSS</li>
-						<li>Javascript/jQuery</li>
+					    <% data.skills.each do |skill| %>
+					      <li><%= skill.lang %></li>
+					    <% end %>					
 					</ul>
 				</div>
 
 				<div class="skill applicaitons animated fadeInUpShort" data-id="2">
 					<h5>Applications</h5>
 					<ul>
-						<li>Sublime Text</li>
-						<li>Adobe Photoshop</li>
-						<li>Adobe Illustrator</li>
-						<li>Adobe Dreamweaver</li>
-					</ul>				
+					    <% data.skills.each do |skill| %>
+					      <li><%= skill.app %></li>
+					    <% end %>					
+					</ul>			
 				</div>
 
 				<div class="skill tools animated fadeInUpShort" data-id="3">
 					<h5>Tools</h5>
 					<ul>
-						<li>JIRA</li>
-						<li>Bugherd</li>
-						<li>Wordpress</li>
-						<li>Sitecore</li>
-						<li>Optimizely</li>
+					<ul>
+					    <% data.skills.each do |skill| %>
+					      <li><%= skill.tools %></li>
+					    <% end %>					
+					</ul>
 					</ul>	
 				</div>
 			</div>
