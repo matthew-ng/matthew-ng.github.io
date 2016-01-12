@@ -14,6 +14,10 @@
 	background-attachment: fixed;
 	@include clearfix;
 
+	@include bp(phone) {
+		background-attachment: scroll; //iOS fix
+	}
+
 	.container .content-about {
 		margin: 0 auto;
 		width: 90%;
