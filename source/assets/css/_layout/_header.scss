@@ -31,19 +31,11 @@
 		letter-spacing: 1px;
 		@include font-size(70);
 		line-height: 80px;
-		opacity: 0.8;
 		
 		@include bp(phone) {
 			@include font-size(36);
 			line-height: 46px;
 		}
-	}
-
-	h2 {
-		margin-bottom: 20px;
-		@include font-size(20);
-		font-weight: 400;
-		opacity: 0.6;
 	}
 
 	p {
