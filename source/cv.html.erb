@@ -1,0 +1,97 @@
+<div class="container">
+	<header>
+		<div class="intro">
+			<h1>Matthew Ng</h1>
+			<h2>Front-End Developer</h2>
+		</div>
+		<div class="contact">
+			<ul>		
+				<li><a href="http://matthew-ng.com" target="_blank">matthew-ng.com</a></li>		
+				<li><a href="mailto:matthew.yan.ng@gmail.com">matthew.yan.ng@gmail.com</a></li>
+				<li>+46 (0)76-090-9443</li>				
+			</ul>
+			
+		</div>
+	</header>
+
+	<hr />
+
+	<section class="row">
+		<dl>
+			<dt class="title"><h3>Profile</h3></dt>
+			<dd class="detail">Enthusiastic and self-motivated Front-End Developer with a background in digital design. I am quick to grasp new concepts and enjoy solving challenging problems with creative solutions. </dd>
+		</dl>
+	</section>
+
+	<hr />
+
+	<section class="row">
+		<dl>
+			<dt class="title"><h3>Technical skills</h3></dt>
+			<dd class="detail">
+				<ul class="skill">
+					<h4>Languages</h4>
+					<% data.skills.lang.each do |lang| %>
+					   	<li><%= lang %></li>
+					<% end %>	
+				</ul>
+
+				<ul class="skill">
+					<h4>Software</h4>
+					<% data.skills.software.each do |software| %>
+						<li><%= software %></li>
+					<% end %>	
+				</ul>
+
+				<ul class="skill">
+					<h4>Tools</h4>
+					<% data.skills.tools.each do |tools| %>
+						<li><%= tools %></li>
+					<% end %>	
+				</ul>
+
+			</dd>
+		</dl>
+	</section>
+
+	<hr />
+
+	<section class="row">
+		<dl>
+			<dt class="title"><h3>Work Experience</h3></dt>
+			<dd class="detail">
+				<% data.jobs.each do |job| %>
+					<div class="item">
+						<div class="heading">
+							<h4><%= job.company %></h4>
+							<span><%= job.position %> | <%= job.date %></span>
+						</div>
+
+						<div class="desc">
+							<%= markdown job.text %>
+						</div>
+					</div>					
+				<% end %>
+			</dd>
+		</dl>
+	</section>
+	
+	<hr />
+
+	<section class="row">
+		<dl>
+			<dt class="title"><h3>Education</h3></dt>
+			<dd class="detail">
+				<% data.education.each do |education| %>
+					<div class="item">
+						<div class="heading">
+							<h4><%= education.uni %></h4>
+							<span><%= education.degree %> | <%= education.date %></span>
+						</div>
+					</div>					
+				<% end %>
+			</dd>
+		</dl>
+	</section>
+
+</div>

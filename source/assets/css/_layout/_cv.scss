@@ -1,0 +1,151 @@
+/* ==========================================================================
+   CV
+   ========================================================================== */
+.cv {
+	@include font-size(14);
+
+
+	header {
+		@include display-flex;
+		@include align-items(center);
+	  	@include justify-content(flex-start);
+	  	@include clearfix();
+		float: left;
+		width: 100%;
+		margin-bottom: 30px;
+		@include bp(phone) {
+			display: block;
+		}
+	}
+
+	hr {
+		width: 100%;
+		@include clearfix();
+		margin: 30px 0;
+	}
+
+
+
+	.container {
+		max-width: 960px;
+		margin: 0 auto;
+		padding: 30px;
+
+		@include bp(phone) {
+			
+		}
+	}
+
+	.intro {
+		display: inline-block;
+		float: left;
+		width: 70%;
+		padding-right: 30px;
+
+		@include bp(phone) {
+			width: 100%;
+			margin-bottom: 20px;
+			padding: 0;
+		}
+
+		h1 {
+			@include font-size(50);
+			margin-bottom: 0px;
+			@include bp(phone) {
+				@include font-size(36)
+			}
+		}
+
+		h2 {
+			@include font-size(24);
+			margin-bottom: 0;
+			@include bp(phone) {
+				@include font-size(20)
+			}
+		}
+	}
+
+	.contact {
+		display: inline-block;
+		float: right;
+		width: 30%;
+
+		@include bp(phone) {
+			float: left;
+			width: 100%;
+		}
+
+		ul {
+			margin: 0;
+		}
+	}
+
+	section dl {
+		width: 100%;
+		margin: 0;
+	}
+
+	.title {
+		float: left;
+		width: 15%;
+		h3 {
+			@include font-size(18);
+		}
+
+		@include bp(phone) {
+			width: 100%;
+		}
+	}
+
+	.detail {
+		float: left;
+		width: 85%;
+		margin: 0;
+		padding-left: 30px;
+
+		h4 {
+			@include font-size(16);
+		}
+
+		.skill {
+			float: left;
+			width: calc(100% / 3);
+			margin: 0;
+			padding-right: 10px;			
+
+			@include bp(phone) {
+				width: 100%;
+				margin-bottom: 20px;
+			}
+		}
+
+		@include bp(phone) {
+			width: 100%;
+			padding: 0;
+		}		
+	}
+
+	.item {
+		margin-bottom: 30px;
+	}
+
+	.heading {
+		margin-bottom: 10px;
+		h4 {
+			margin-bottom: 0;
+		}
+		span {
+			@include font-size(12);
+		}
+	}
+
+	.desc li {
+		list-style-type: disc;
+		list-style-position: inside;
+		text-indent: -10px;
+		padding-left: 10px;
+
+
+	}
+}
+

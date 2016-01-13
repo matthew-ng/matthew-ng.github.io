@@ -12,7 +12,7 @@
 					<p>You can usually find me strumming the riff stick in <a href="https://www.facebook.com/theothershc" target="_blank">The Others</a>, co-running <a href="https://www.facebook.com/shamanrecordsperth" target="_blank">Shaman Records</a>, crate digging, <a href="http://thoughtvacation.tumblr.com/" target="_blank">shooting film</a> and travelling.</p>
 
 					<p>Feel free to <a href="mailto:matthew.yan.ng@gmail.com">get in touch</a> if you'd like to know more.</p>
-					<a href="#" class="btn-primary">View my resume (PDF)</a>	
+					<a href="/cv" class="btn-primary">View my CV</a>	
 				</div>
 			</div>
 
@@ -20,8 +20,8 @@
 				<div class="skill lang animated fadeInUpShort" data-id="1">
 					<h5>Languages</h5>
 					<ul>
-					    <% data.skills.each do |skill| %>
-					      <li><%= skill.lang %></li>
+					    <% data.skills.lang.each do |lang| %>
+					    	<li><%= lang %></li>
 					    <% end %>					
 					</ul>
 				</div>
@@ -29,20 +29,18 @@
 				<div class="skill applicaitons animated fadeInUpShort" data-id="2">
 					<h5>Applications</h5>
 					<ul>
-					    <% data.skills.each do |skill| %>
-					      <li><%= skill.app %></li>
-					    <% end %>					
+					    <% data.skills.software.each do |software| %>
+					    	<li><%= software %></li>
+					    <% end %>	
 					</ul>			
 				</div>
 
 				<div class="skill tools animated fadeInUpShort" data-id="3">
 					<h5>Tools</h5>
 					<ul>
-					<ul>
-					    <% data.skills.each do |skill| %>
-					      <li><%= skill.tools %></li>
+					    <% data.skills.tools.each do |tools| %>
+					    	<li><%= tools %></li>
 					    <% end %>					
-					</ul>
 					</ul>	
 				</div>
 			</div>

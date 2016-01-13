@@ -1,13 +1,15 @@
-- lang: HTML (5)
-- lang: CSS (3)
-- lang: SASS
-- lang: Javscript / jQuery
-- app: Sublime Text
-- app: Adobe Photoshop
-- app: Adobe Illustrator
-- app: Adobe Dreamweaver
-- tools: JIRA
-- tools: Bugherd
-- tools: Wordpress
-- tools: Sitecore
-- tools: Optimizely
+lang:
+  - HTML (5)
+  - CSS (3) via SASS
+  - Javscript / jQuery
+software:
+  - Sublime Text
+  - Adobe Photoshop
+  - Adobe Illustrator
+  - Adobe Dreamweaver
+tools:
+  - JIRA
+  - Bugherd
+  - Wordpress
+  - Sitecore
+  - Optimizely

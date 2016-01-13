@@ -81,12 +81,12 @@ a {
  */
 
 ::-moz-selection {
-    // background: $selection-color;
+    background: $gray-lightest;
     text-shadow: none;
 }
 
 ::selection {
-    // background: $selection-color;
+    background: $gray-lightest;
     text-shadow: none;
 }
 
@@ -95,14 +95,14 @@ a {
  * A better looking default horizontal rule
  */
 
-// hr {
-//     display: block;
-//     height: 1px;
-//     border: 0;
-//     border-top: $base-border;
-//     margin: 1em 0;
-//     padding: 0;
-// }
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    margin: 1em 0;
+    padding: 0;
+    background: $gray-lighter;
+}
 
 /*
  * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
