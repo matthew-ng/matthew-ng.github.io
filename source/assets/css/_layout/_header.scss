@@ -3,6 +3,7 @@
    ========================================================================== */
 .index header {
 	@include display-flex;
+	@include flex-ms();
 	@include align-items(center);
   	@include justify-content(center);
 	width: 100%;

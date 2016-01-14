@@ -13,6 +13,7 @@
 /* Section */
 section {
     @include display-flex;
+    @include flex-ms();
     @include align-items(center);
     position: relative;
     @include clearfix();
@@ -63,6 +64,7 @@ section.work {
 /* Work */
 .work-wrapper {
     @include display-flex();
+    @include flex-ms();
 	@include align-items(center);
     position: relative;    
     width: 100%;
@@ -74,6 +76,17 @@ section.work {
         height: auto;
         padding: 20px 0;
     }    
+}
+
+.work-wrapper li.work-myrac {
+	width: 100%;
+	height: 582px; // Set to image height to fix absolute positioning in MOZ
+    @include display-flex();
+    @include flex-ms();
+	@include align-items(center);
+	@include bp(phone) {
+		height: auto;
+	}
 }
 
 .img-crop.myrac-screens {
@@ -177,7 +190,9 @@ section.about {
 
 .skills-content {
 	@include display-flex;
+	@include flex-ms();
 	@include align-items(flex-start);
+	-ms-flex-align: start;
 	background: $white;
 	text-align: center;
 	margin-top: 100px;

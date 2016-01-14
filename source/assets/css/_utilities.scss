@@ -43,6 +43,14 @@ $base-font-size-no-unit: 16;
           border-radius: $radius;
 }
 
+@mixin flex-ms() {
+	display: -ms-flexbox;
+	 -ms-flex-direction: row;
+	 -ms-flex-pack: center;
+	 -ms-flex-line-pack: stretch;
+	 -ms-flex-align: center;
+}
+
 
 @mixin bp($class) {
   @if $class == phone {
